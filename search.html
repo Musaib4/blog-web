@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            color: black;
+        }
+        .button{
+            color: white;
+            background-color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" role="navigation">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <div class="logo">MyStore</div>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="aricle.html">Articles</a></li>
+      <li><a href="/about.html">About </a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <!-- <li><a href="privacy.html">Privacy Policy</a></li> -->
+    </ul>
+
+    <!-- Desktop Search -->
+    <div class="search-wrap">
+  <form class="search-bar">
+    
+
+    <input class="search-input" type="search" placeholder="Search..." />
+
+    <label class="select-wrap">
+      <select class="search-cat">
+        <option value="all">All Categories</option>
+        <option value="Articles">Articles</option>
+      </select>
+    </label>
+
+    <!-- Magnifying glass icon button -->
+    <button class="search-icon-btn" type="submit">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"></circle>
+        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+      </svg>
+    </button>
+
+  </form>
+</div>
+
+
+    <!-- Mobile Controls -->
+    <div class="controls">
+      <button class="hamburger" id="hamburger">
+        <svg width="20" height="12" viewBox="0 0 20 12">
+          <rect width="20" height="2" rx="1" fill="currentColor"></rect>
+          <rect y="5" width="20" height="2" rx="1" fill="currentColor"></rect>
+          <rect y="10" width="20" height="2" rx="1" fill="currentColor"></rect>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobileMenu">
+      <nav class="mobile-links">
+        <a href="/index.html">Home</a>
+        <a href="/aricle.html">Articles</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/contact.html">Contact Us</a>
+        <a href="/terms.html">Terms and Conditions</a>
+      </nav>
+
+      <div class="mobile-search">
+        <form class="search-bar">
+          <label class="select-wrap">
+            <select class="search-cat">
+              <option value="all">All Categories</option>
+              <option value="electronics">Articles</option>
+            </select>
+          </label>
+
+          <input class="search-input" type="search" placeholder="Search..." />
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+    <div class="a"><H1>No Results Found</H1>
+    <a href="index.html" class="button">Go Back</a></div>
+</body>
+</html>
