@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     : location.pathname.split('/').pop();
 
   // select both desktop and mobile links
-  const links = document.querySelectorAll('.nav-links a, .mobile-links a');
+  const links = document.querySelectorAll('.site-nav-links a, .mobile-links a');
 
   links.forEach(link => {
     const href = link.getAttribute('href') || '';
@@ -226,3 +226,5 @@ hamburger.addEventListener("click", () => {
   setup();
 
 })();
+
+
