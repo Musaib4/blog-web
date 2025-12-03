@@ -1259,4 +1259,45 @@ a.buy-btn{
 
 /* try */
 
-/* Banner Section */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+.fade-in {
+  animation: fade-in 0.8s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.card-cta {
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  padding: 5px;
+
+}
+
+.card-cta::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  color: black;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.card-cta:hover::after {
+  width: 100%;
+}
+
+.card-cta:hover {
+  color: white;
+}
