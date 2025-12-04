@@ -1485,3 +1485,8 @@ a.buy-btn{
 .btn:hover{
   background-color: darkcyan;
 }
+
+.margint{
+  margin-top: 10vh;
+  margin-left: 10vw;
+}
