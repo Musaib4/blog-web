@@ -37,7 +37,7 @@
             <div style="display:flex; gap:10px; align-items:center;">
               <span id="p-cat" class="badge-cat">Category</span>
               <div style="margin-left:auto;">
-                <a id="backBtn" href="index.html" class="back-link">← Back to products</a>
+                <a id="backBtn" href="index.html" class="back-link">← Back to Home</a>
               </div>
             </div>
 
@@ -70,8 +70,9 @@
     </div> <!-- productWrap -->
 
 
-    <div class="shell">
-    <div class="container">
+    <section class="featured-posts fade-in">
+    <h2 class="section-title">Featured </h2>
+    <div class=" fade-in">
       <div class="row g-3">
         <!-- card 1 -->
         <div class="col-12 col-sm-6 col-md-3">
@@ -82,7 +83,7 @@
 
             <div class="wsk-cp-text">
               <div class="category">
-                <button type="button" onclick="location.href='product-details.html?id=1'">Read more</button>
+                <button  type="button" onclick="location.href='product-details.html?id=1'">Read more</button>
               </div>
 
               <div class="title-product">
@@ -158,9 +159,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div> <!-- container -->
+      </div> <!-- container -->
   </div>
+    
+</section>
   </div>
 
   <!-- footer -->
@@ -214,48 +216,98 @@
   <script>
     // Minimal product "database" — expand/replace with real data or fetch from server
     const products = [
-      {
-        id: "1",
-        title: "Dragon Legal Individual v16",
-        image: "j2.webp",
-        category: "Software / Legal",
-        description: "Dragon Legal Individual v16 is a speech recognition solution tailored for legal professionals. It offers industry-specific vocabularies, high accuracy and faster transcription workflows.",
-        specs: [
-          "Speech-to-text with legal lexicon",
-          "Supports templates and custom vocab",
-          "Export to DOCX and PDF",
-          "Windows & macOS compatible"
-        ],
-        extra: "License key delivered via email. Free 7-day trial available."
-      },
-      {
-        id: "2",
-        title: "Introvert Toolkit",
-        image: "j1.webp",
-        category: "App / Wellness",
-        description: "A lightweight toolkit to help with scheduled downtime, playlists, and journaling prompts built for introverted users.",
-        specs: ["Offline-first", "Playlist manager", "Daily prompts", "Low battery usage"],
-        extra: "Includes 50 guided prompts and 10 calming playlists."
-      },
-      {
-        id: "3",
-        title: "Beauty Essentials Pack",
-        image: "j3.webp",
-        category: "Health & Beauty",
-        description: "A curated guide + digital kit with natural care plans, step-by-step routines and grocery lists for a 7-day natural glow-up.",
-        specs: ["7-day routines", "Ingredient-safe guide", "DIY face masks", "Video demos"],
-        extra: "Not a substitute for medical advice. Patch-test recommended."
-      },
-      {
-        id: "4",
-        title: "Stage Drama Toolkit",
-        image: "j4.webp",
-        category: "Arts / Theatre",
-        description: "All-in-one kit for small theatre groups: scripts, blocking diagrams, music cues and rehearsal schedule templates.",
-        specs: ["20 sample scripts", "Blocking templates", "Cue-sheet generator", "Rehearsal scheduler"],
-        extra: "Includes printable PDF templates and editable source files."
-      }
-    ];
+  {
+    id: "1",
+    title: "Dragon Legal Individual v16",
+    image: "j2.webp",
+    category: "Software / Legal",
+    description:
+      "Dragon Legal Individual v16 is engineered for lawyers, advocates, and legal documentation teams. This blog dives deep into how AI-powered dictation reduces drafting time, improves accuracy in legal vocabulary, and reshapes the daily workflow of modern law offices.",
+    specs: [
+      "Built-in legal lexicon with case-law terms",
+      "Dictation speed up to 160 wpm",
+      "Smart correction + custom vocabulary",
+      "Seamless export to Word, PDFs, and case tools",
+    ],
+  },
+
+  {
+    id: "2",
+    title: "Introvert Toolkit",
+    image: "j1.webp",
+    category: "App / Wellness",
+    description:
+      "Designed for digital wellness enthusiasts, the Introvert Toolkit focuses on mindful routines and scheduled quiet time. This blog explores how curated solitude activities and journaling help recharge energy and reduce daily overwhelm.",
+    specs: [
+      "Offline-first mood & routine planner",
+      "Personalized playlist builder",
+      "AI-powered journaling prompts",
+      "Battery-friendly minimal UI",
+    ],
+  },
+
+  {
+    id: "3",
+    title: "Beauty Essentials Pack",
+    image: "j3.webp",
+    category: "Health & Beauty",
+    description:
+      "A complete 7-day glow-up blogging bundle featuring skincare essentials, DIY mask recipes, and ingredient-safe guides. This article discusses how natural routines outperform commercial creams and help build long-term skin health.",
+    specs: [
+      "7-day natural skincare blueprint",
+      "Derm-safe ingredient explanations",
+      "Home facial & mask recipes",
+      "Step-by-step routine videos",
+    ],
+  },
+
+  {
+    id: "4",
+    title: "Stage Drama Toolkit",
+    image: "j4.webp",
+    category: "Arts / Theatre",
+    description:
+      "For theatre creators and performers, this toolkit explores how structured rehearsal planning and scene breakdowns improve storytelling. This blog edition provides insights into script selection, blocking diagrams, and stagecraft basics.",
+    specs: [
+      "20 ready-to-use short scripts",
+      "Blocking & movement templates",
+      "Cue-sheet & music timing tools",
+      "Digital rehearsal planner",
+    ],
+  },
+
+  // ⭐ NEW PRODUCT (ID 5)
+  {
+    id: "5",
+    title: "Dragon PowerMic III – Pro Dictation Microphone",
+    image: "b2.webp",
+    category: "Hardware / Productivity",
+    description:
+      "In this blog review, we explore why professionals using Dragon rely on PowerMic III for superior accuracy. From noise cancellation to programmable buttons, this hardware upgrade transforms dictation into a seamless, hands-free experience.",
+    specs: [
+      "Studio-grade noise cancellation",
+      "Programmable buttons for commands",
+      "USB plug-and-play connectivity",
+      "Optimized for Dragon v15/v16",
+    ],
+  },
+
+  // ⭐ NEW PRODUCT (ID 6)
+  {
+    id: "6",
+    title: "Writers’ Productivity Bundle",
+    image: "b2.webp",
+    category: "Writing / Creativity",
+    description:
+      "A blogging-focused pack for authors, content creators, and students. This edition explains how structured templates, focus music, and AI brainstorming workflows help writers break block and increase daily output.",
+    specs: [
+      "10 writing templates for blogs & essays",
+      "Focus playlist library",
+      "AI idea brainstorming sheets",
+      "Daily writing habit tracker",
+    ],
+  }
+];
 
     // parse query param "id"
     function getQueryParam(name) {
