@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Dragon</title>
-  <meta name="description" content="Dev blog — tutorials, reviews, tools and guides. Contact for collaborations, guest posts, or advertising." />
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body style="background-color: #fff;">
   <nav class="site-navbar" role="navigation">
@@ -93,88 +93,54 @@
     <!-- HERO -->
 
     <!-- WHY CHOOSE US -->
-    <section class="why">
-      <h2>Why Read Our Blog</h2>
-      <p class="muted">Practical posts, clear examples, and fast answers for busy developers.</p>
+    <section class="con-panel">
 
-      <div class="features">
-        <div class="feature">
-          <div class="feature-icon">📚</div>
-          <h3>Actionable Tutorials</h3>
-          <p>Step-by-step guides that you can use immediately in your projects.</p>
+      <!-- LEFT INFO -->
+      <aside class="con-info">
+        <div class="con-icon">✉️</div>
+        <h2>Contact Dragon-Store</h2>
+        <p class="con-small">We respond within 1 business day.</p>
+
+        <div class="con-meta">
+          <span><strong>Company Mail:</strong> info@nexsecure-store.com</span>
+          <span><strong>Hours:</strong> Mon–Fri, 9:00–18:00</span>
         </div>
+      </aside>
 
-        <div class="feature">
-          <div class="feature-icon">⚙️</div>
-          <h3>Tooling & Tips</h3>
-          <p>Recommendations and workflows that speed up development and debugging.</p>
-        </div>
+      <!-- RIGHT FORM -->
+      <div class="con-form-wrap">
+        <form class="con-form">
+          
+          <div class="con-row">
+            <label>Name <span class="required">*</span></label>
+            <div class="con-inline">
+              <input type="text" placeholder="First" required>
+              <input type="text" placeholder="Last" required>
+            </div>
+          </div>
 
-        <div class="feature">
-          <div class="feature-icon">🧭</div>
-          <h3>Clear Roadmaps</h3>
-          <p>Project-based learning paths and career-focused advice you can follow.</p>
-        </div>
-      </div>
-    </section>
+          <div class="con-row">
+            <label>Email <span class="required">*</span></label>
+            <input type="email" placeholder="you@example.com" required>
+          </div>
 
-    <!-- TOPICS / SERVICES -->
-    <section id="services" class="services">
-      <h2>Topics We Cover</h2>
+          <div class="con-row">
+            <label>Subject <span class="required">*</span></label>
+            <input type="text" placeholder="Enter subject" required>
+          </div>
 
-      <div class="service-grid">
-        <article class="service-card">
-          <h3>Tutorials</h3>
-          <p>Practical guides on building features with clear code examples and explanations.</p>
-        </article>
+          <div class="con-row">
+            <label>Message</label>
+            <textarea placeholder="Write your message..."></textarea>
+          </div>
 
-        <article class="service-card">
-          <h3>Reviews</h3>
-          <p>Honest tool and library reviews to help you pick the right stack and tools.</p>
-        </article>
+          <div class="con-actions">
+            <button type="submit" class="con-btn">Send Message</button>
+            <div id="con-spinner" class="con-spinner" style="display:none;"></div>
+            <div id="con-message" class="con-message"></div>
+          </div>
 
-        <article class="service-card">
-          <h3>Guides</h3>
-          <p>How-to articles for deployment, performance, testing, and developer workflows.</p>
-        </article>
-
-        <article class="service-card">
-          <h3>Code Snippets</h3>
-          <p>Reusable snippets and mini-projects you can drop into your apps.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT / CTA -->
-    <section class="contact-block">
-      <h2>Get In Touch</h2>
-      <p class="muted">Want to collaborate, advertise, or pitch a guest post? Here’s how to reach the blog team.</p>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Support / Reader Help</h3>
-          <p class="muted">Questions about articles, code, or missing steps.</p>
-          <ul class="phones">
-            <li><strong>Phone:</strong> <a href="tel:+394848893498438">+394848893498438</a></li>
-          </ul>
-          <a href="tel:+394848893498438" class="cta">Call Support</a>
-        </div>
-
-        <div class="contact-card">
-          <h3>Advertising & Partnerships</h3>
-          <p class="muted">ad placements, Sponsorships and brand partnerships.</p>
-          <ul class="phones">
-            <li><strong>Phone:</strong> <a href="tel:+394848893498438">+394848893498438</a></li>
-          </ul>
-          <a href="tel:+394848893498438" class="cta">Contact Sales</a>
-        </div>
-
-        <div class="contact-card contact-info-card">
-          <h3>General</h3>
-          <p class="muted">Email, submissions and business hours</p>
-          <p><strong>Email:</strong> <a href="mailto:nnnn@jjd.cc">nnnn@jjd.cc</a></p>
-          <a href="mailto:nnnn@jjd.cc" class="cta cta-secondary">Email Us</a>
-        </div>
+        </form>
       </div>
     </section>
 
@@ -229,6 +195,37 @@
 </footer>
 
   <script src="script.js"></script>
+   <script>
+    const form = document.querySelector('.con-form');
+    const button = document.querySelector('.con-btn');
+    const spinner = document.getElementById('con-spinner');
+    const msg = document.getElementById('con-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      spinner.style.display = 'inline-block';
+      button.disabled = true;
+
+      setTimeout(() => {
+        spinner.style.display = 'none';
+        button.disabled = false;
+
+        msg.style.display = 'block';
+        msg.textContent = 'Your message has been sent successfully.';
+        msg.className = 'con-message success';
+
+        form.reset();
+
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 5000);
+
+      }, 900);
+    });
+  </script>
 
 </body>
+
 </html>
+
